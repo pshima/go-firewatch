@@ -1,2 +1,8 @@
-# go-cloudwatch-alarm-watcher
-A small go binary to report on the status of aws cloudwatch alarms
+# go-firewatch
+A utility to watch sources for signs of fires.
+
+Inputs:
+- AWS cloudwatch alarms
+
+Outputs:
+- Exit codes with output (support for consul, nagios, etc)
