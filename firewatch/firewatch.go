@@ -31,7 +31,12 @@ func (j *Job) Check() error {
 }
 
 func queryCloudWatchAlarm(p string) ([]*cloudwatch.MetricAlarm, error) {
-	svc := cloudwatch.New(session.New())
+	region, err := getRegion()
+	if err != nil {
+		return nil, err
+	}
+
+	svc := cloudwatch.New(session.New(&aws.Config{Region: aws.String(region)}))
 
 	params := &cloudwatch.DescribeAlarmsInput{
 		AlarmNamePrefix: aws.String(p),

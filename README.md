@@ -17,6 +17,9 @@ If your alarming is built around Consul then this helps with consistency in alar
 
 The goal here at the moment is only to provide notification of the state of an external alarm to Consul, not to have logic around alarming.
 
+# Credentials
+There aren't any options for this in go-firewatch, use environment variables or an ec2 instance profile
+
 # Usage
 
 ```
