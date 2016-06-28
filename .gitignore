@@ -26,3 +26,4 @@ _testmain.go
 pkg/
 bin/
 go-firewatch
+.DS_Store
